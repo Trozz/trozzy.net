@@ -10,9 +10,6 @@ categories = [
 
 +++
 
-_This is the first in a series of posts that will document some actions that can be performed using the Rackspace Cloud API._
-
-
 During my previous time at Rackspace numerous users have had issues where their Managed Cloud Server would enter a failed status, this is commonly due to the post-build automation failing, the reasons for this can include novaclient not running, SSH running on a different port, package installation issues et al.
 
 This would commonly result in the user having to contact Rackspace to resolve the issue, while you should continue to contact Rackspace about this to ensure that the managed software is correctly installed, the below would allow you to update the metadata that is set due to this failure.
