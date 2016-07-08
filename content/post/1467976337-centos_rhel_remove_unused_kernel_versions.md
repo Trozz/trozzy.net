@@ -1,9 +1,9 @@
 +++
-categories = ["x", "y"]
+categories = ["CentOS", "RHEL", "General"]
 date = "2016-07-08T12:13:18+01:00"
 description = ""
-draft = true
-tags = ["x", "y"]
+draft = false
+tags = ["RHEL", "CentOS"]
 title = "CentOS / RedHat remove unused kernel versions"
 
 +++
