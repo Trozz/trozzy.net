@@ -5,6 +5,7 @@ author = "Trozz"
 copyright = "&copy; 2016. All rights reserved."
 canonifyurls = true
 paginate = 10
+cf_full_purge = false
 
 [indexes]
   tag = "tags"
