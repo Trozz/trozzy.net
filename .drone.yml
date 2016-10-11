@@ -1,0 +1,23 @@
+build:
+  image: golang:alpine
+  commands:
+    - apk add --no-cache git nodejs curl
+    - go get -v github.com/spf13/hugo
+    - npm install hugo-lunr
+    - hugo --theme blackburn
+    - npm run index
+    - sh clear-cf-cache.sh
+  environment:
+    - KEY=$$CF_Key
+    - DOMAIN=$$CF_Domain
+    - EMAIL=$$CF_Email
+
+publish:
+  docker:
+    username: trozz
+    password: $$Docker_Pass
+    email: $$Docker_email
+    repo: trozz/trozzy.net
+    file: Dockerfile
+    tag: latest
+

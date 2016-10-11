@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 if [[ $(grep cf_full_purge config.toml) =~ true$ ]]; then
 curl -X DELETE "https://api.cloudflare.com/client/v4/zones/$DOMAIN/purge_cache" \
 -H "X-Auth-Email: $EMAIL" \
