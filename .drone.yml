@@ -16,7 +16,7 @@ publish:
   docker:
     username: trozz
     password: $$Docker_Pass
-    email: $$Docker_email
+    email: $$Docker_Email
     repo: trozz/trozzy.net
     file: Dockerfile
     tag: latest
