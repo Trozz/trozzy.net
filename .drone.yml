@@ -18,7 +18,7 @@ deploy:
     host: lon1.internal.trozzy.xyz
     port: 22
     source: public
-    target: /opt/web/trozzy.net/public/
+    target: /opt/web/trozzy.net/
     delete: true
     recursive: true
   rsync:
@@ -26,7 +26,7 @@ deploy:
     host: lon2.internal.trozzy.xyz
     port: 22
     source: public
-    target: /opt/web/trozzy.net/public/
+    target: /opt/web/trozzy.net/
     delete: true
     recursive: true
   rsync:
@@ -34,7 +34,7 @@ deploy:
     host: lon3.internal.trozzy.xyz
     port: 22
     source: public
-    target: /opt/web/trozzy.net/public/
+    target: /opt/web/trozzy.net/
     delete: true
     recursive: true
   rsync:
@@ -42,6 +42,6 @@ deploy:
     host: lon4.internal.trozzy.xyz
     port: 22
     source: public
-    target: /opt/web/trozzy.net/public/
+    target: /opt/web/trozzy.net/
     delete: true
     recursive: true
