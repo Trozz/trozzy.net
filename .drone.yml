@@ -3,7 +3,6 @@ clone:
   submodule_override:
     themes/blackburn: https://github.com/yoshiharuyamashita/blackburn.git
 
-
 build:
   image: golang:alpine
   commands:
@@ -12,18 +11,37 @@ build:
     - npm install hugo-lunr
     - hugo --theme blackburn
     - npm run index
-    - cat public/index.html
-  environment:
-    - KEY=$$CF_Key
-    - DOMAIN=$$CF_Domain
-    - EMAIL=$$CF_Email
 
-publish:
-  docker:
-    username: trozz
-    password: $$Docker_Pass
-    email: $$Docker_Email
-    repo: trozz/trozzy.net
-    file: Dockerfile
-    tag: latest
-
+deploy:
+  rsync:
+    user: deploy
+    host: lon1.internal.trozzy.xyz
+    port: 22
+    source: public
+    target: /opt/web/trozzy.net/public/
+    delete: true
+    recursive: true
+  rsync:
+    user: deploy
+    host: lon2.internal.trozzy.xyz
+    port: 22
+    source: public
+    target: /opt/web/trozzy.net/public/
+    delete: true
+    recursive: true
+  rsync:
+    user: deploy
+    host: lon3.internal.trozzy.xyz
+    port: 22
+    source: public
+    target: /opt/web/trozzy.net/public/
+    delete: true
+    recursive: true
+  rsync:
+    user: deploy
+    host: lon4.internal.trozzy.xyz
+    port: 22
+    source: public
+    target: /opt/web/trozzy.net/public/
+    delete: true
+    recursive: true
