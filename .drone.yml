@@ -3,6 +3,14 @@ clone:
   submodule_override:
     themes/blackburn: https://github.com/yoshiharuyamashita/blackburn.git
 
+cache:
+  mount:
+    - node_modules
+    - github.com
+    - golang.org
+    - gopkg.in
+
+
 build:
   image: golang:alpine
   commands:
