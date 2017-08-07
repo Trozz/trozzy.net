@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Load Balancers on Just another blog</title>
+    <link>https://www.trozzy.net/tags/load-balancers/</link>
+    <description>Recent content in Load Balancers on Just another blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2016. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 04 Jul 2016 21:06:14 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.trozzy.net/tags/load-balancers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>fail2ban cloud loadbalancers</title>
+      <link>https://www.trozzy.net/post/1467662752-fail2ban-cloud-loadbalancers/</link>
+      <pubDate>Mon, 04 Jul 2016 21:06:14 +0100</pubDate>
+      
+      <guid>https://www.trozzy.net/post/1467662752-fail2ban-cloud-loadbalancers/</guid>
+      <description>Cloud Load Balancers (LBaaS) can be used for numerous reasons, the most commonly that is for distrobuting traffic between multiple servers instead of using HAProxy or a dedicated Load Balancer, there are possitives and negatives to this however in my view load balancing as a service is a fantastic service, with some draw backs which I am sure I will detail in future posts.
+Anywho on to the actural reason you are reading this</description>
+    </item>
+    
+  </channel>
+</rss>
