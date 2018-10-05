@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Openstack on Just another blog</title>
+    <link>https://www.trozzy.net/tags/openstack/</link>
+    <description>Recent content in Openstack on Just another blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2018. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 04 Jul 2016 15:13:47 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.trozzy.net/tags/openstack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Resetting rax_service_level_automation metadata</title>
+      <link>https://www.trozzy.net/post/1467641615-resetting-rax_service_level_automation-metadata/</link>
+      <pubDate>Mon, 04 Jul 2016 15:13:47 +0100</pubDate>
+      
+      <guid>https://www.trozzy.net/post/1467641615-resetting-rax_service_level_automation-metadata/</guid>
+      <description>During my previous time at Rackspace numerous users have had issues where their Managed Cloud Server would enter a failed status, this is commonly due to the post-build automation failing, the reasons for this can include novaclient not running, SSH running on a different port, package installation issues et al.
+This would commonly result in the user having to contact Rackspace to resolve the issue, while you should continue to contact Rackspace about this to ensure that the managed software is correctly installed, the below would allow you to update the metadata that is set due to this failure.</description>
+    </item>
+    
+  </channel>
+</rss>

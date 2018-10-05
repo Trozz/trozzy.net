@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wordpress on Just another blog</title>
+    <link>https://www.trozzy.net/tags/wordpress/</link>
+    <description>Recent content in Wordpress on Just another blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2018. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 11 Jul 2016 19:11:27 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.trozzy.net/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Using Wordpress as a Static Site</title>
+      <link>https://www.trozzy.net/post/1468260369-wordpress-static-site/</link>
+      <pubDate>Mon, 11 Jul 2016 19:11:27 +0100</pubDate>
+      
+      <guid>https://www.trozzy.net/post/1468260369-wordpress-static-site/</guid>
+      <description>Many people prefer to use Wordpress over platforms such as Hugo, Ghost et al. many of these situations don&amp;rsquo;t need a blogging platform but instead choose Wordpress due to the array of plugins and ease of management, however this obviously have a overhead compared to a static site.
+Why use it There can be many reasons that someone decides to use Wordpress over a flat file content management system (CMS) or even just a normal static site, some advantages and disadvantages are listed below</description>
+    </item>
+    
+  </channel>
+</rss>

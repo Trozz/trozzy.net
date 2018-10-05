@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.trozzy.net/post/1468260369-wordpress-static-site/</loc>
+    <lastmod>2016-07-11T19:11:27+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/post/1467976337-centos_rhel_remove_unused_kernel_versions/</loc>
+    <lastmod>2016-07-08T12:13:18+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/post/1467669072-automating-hugo-deployment/</loc>
+    <lastmod>2016-07-04T22:51:30+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/post/1467662752-fail2ban-cloud-loadbalancers/</loc>
+    <lastmod>2016-07-04T21:06:14+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/post/1467641615-resetting-rax_service_level_automation-metadata/</loc>
+    <lastmod>2016-07-04T15:13:47+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/contact/</loc>
+    <lastmod>2016-07-04T15:12:40+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/about/</loc>
+    <lastmod>2016-07-04T15:12:11+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/api/</loc>
+    <lastmod>2016-07-04T21:06:14+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/automation/</loc>
+    <lastmod>2016-07-04T22:51:30+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/centos/</loc>
+    <lastmod>2016-07-08T12:13:18+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/codeship/</loc>
+    <lastmod>2016-07-04T22:51:30+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/devops/</loc>
+    <lastmod>2016-07-04T22:51:30+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/fail2ban/</loc>
+    <lastmod>2016-07-04T21:06:14+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/git/</loc>
+    <lastmod>2016-07-04T22:51:30+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/</loc>
+    <lastmod>2016-07-11T19:11:27+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/load-balancers/</loc>
+    <lastmod>2016-07-04T21:06:14+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/openstack/</loc>
+    <lastmod>2016-07-04T15:13:47+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/post/</loc>
+    <lastmod>2016-07-11T19:11:27+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/rackspace/</loc>
+    <lastmod>2016-07-04T21:06:14+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/rhel/</loc>
+    <lastmod>2016-07-08T12:13:18+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/</loc>
+    <lastmod>2016-07-04T21:06:14+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/topics/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.trozzy.net/tags/wordpress/</loc>
+    <lastmod>2016-07-11T19:11:27+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

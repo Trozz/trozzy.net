@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.49" />
+
+  <title>fail2ban cloud loadbalancers &middot; Just another blog</title>
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://www.trozzy.net/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://www.trozzy.net/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://www.trozzy.net/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/agate.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://www.trozzy.net/img/favicon.ico" type="image/x-icon" />
+
+  
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+  <a class="pure-menu-heading brand" href="https://www.trozzy.net/">TrozzY</a>
+
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://www.trozzy.net/post/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://www.trozzy.net/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://www.trozzy.net/contact/"><i class='fa fa-phone fa-fw'></i>Contact</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://cv.trozzy.net/"><i class='fa fa-address-card fa-fw'></i>Resume</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://www.trozzy.net/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://twitter.com/trozz" target="_blank"><i class="fa fa-twitter-square fa-fw"></i>Twitter</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://facebook.com/trozz1548" target="_blank"><i class="fa fa-facebook-square fa-fw"></i>Facebook</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://plus.google.com/+&#43;MichaelLeer" target="_blank"><i class="fa fa-google-plus-square fa-fw"></i>Google+</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://youtube.com/user/trozz" target="_blank"><i class="fa fa-youtube-square fa-fw"></i>YouTube</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://linkedin.com/in/trozz" target="_blank"><i class="fa fa-linkedin-square fa-fw"></i>LinkedIn</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://reddit.com/user/trozz1548" target="_blank"><i class="fa fa-reddit-square fa-fw"></i>Reddit</a>
+    </li>
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/Trozz" target="_blank"><i class="fa fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://gitlab.com/Trozz" target="_blank"><i class="fa fa-gitlab fa-fw"></i>GitLab</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://bitbucket.org/Trozz" target="_blank"><i class="fa fa-bitbucket-square fa-fw"></i>Bitbucket</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://stackoverflow.com/users/989652/trozz" target="_blank"><i class="fa fa-stack-overflow fa-fw"></i>Stack Overflow</a>
+    </li>
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://serverfault.com/users/55793/trozz" target="_blank"><i class="fa fa-server fa-fw"></i>Server Fault</a>
+    </li>
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://steamcommunity.com/id/trozz" target="_blank"><i class="fa fa-steam-square fa-fw"></i>Steam</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://keybase.io/trozz" target="_blank"><i class="fa fa-key fa-fw"></i>Keybase</a>
+    </li>
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2018. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>fail2ban cloud loadbalancers</h1>
+  <h2></h2>
+</div>
+<div class="content">
+
+  <div class="post-meta">
+
+  <div>
+    <i class="fa fa-calendar fa-fw"></i>
+    <time>04 Jul 2016, 21:06</time>
+  </div>
+
+  
+
+  
+
+  
+  
+  
+  <div>
+    <i class="fa fa-tags fa-fw"></i>
+    
+      <a class="post-taxonomy-tag" href="https://www.trozzy.net/tags/rackspace">rackspace</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://www.trozzy.net/tags/api">api</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://www.trozzy.net/tags/fail2ban">fail2ban</a>&nbsp;&#47;
+    
+      <a class="post-taxonomy-tag" href="https://www.trozzy.net/tags/load-balancers">load balancers</a>
+    
+  </div>
+  
+  
+
+</div>
+
+  
+
+<p>Cloud Load Balancers (LBaaS) can be used for numerous reasons, the most commonly that is for distrobuting traffic between multiple servers instead of using HAProxy or a dedicated Load Balancer, there are possitives and negatives to this however in my view load balancing as a service is a fantastic service, with some draw backs which I am sure I will detail in future posts.</p>
+
+<p>Anywho on to the actural reason you are reading this</p>
+
+<h2 id="challenge">Challenge</h2>
+
+<p>When using any form of Load Balancing you cannot simply block the IP address of the requests as this will be the Load Balancers IP address, all hope is not lost however as the stand is to send along an additional header such as <code>X-Forwarded-For</code> or <code>X-Real-IP</code>, I am not sure where the latter came from but the former is the most likely to be seen, using this additional header we can get the users IP address, this can be used within system logging or your application, in the situation that we are going to discuss we are relying on the system logging the IP address correctly.</p>
+
+<p><em>Please be aware that I am not the author of this script so use with caution <strong>I do however plan to create a Python version</strong></em></p>
+
+<h2 id="required-software">Required software</h2>
+
+<p>[ ] Fail2Ban</p>
+
+<p>[ ] PHP</p>
+
+<p>[ ] <a href="https://raw.githubusercontent.com/sidgtl/rackban/master/scripts/rackban.php">PHP Script</a></p>
+
+<pre><code class="language-bash">yum install php-cli fail2ban
+wget https://raw.githubusercontent.com/sidgtl/rackban/master/scripts/rackban.php -o $HOME/rackban.php
+</code></pre>
+
+<pre><code class="language-bash">apt-get install php-cli fail2ban
+wget https://raw.githubusercontent.com/sidgtl/rackban/master/scripts/rackban.php -o $HOME/rackban.php
+</code></pre>
+
+<pre><code class="language-bash">pacman -S php fail2ban
+wget https://raw.githubusercontent.com/sidgtl/rackban/master/scripts/rackban.php -o $HOME/rackban.php
+</code></pre>
+
+<h2 id="configure-and-test-it">Configure and Test it</h2>
+
+<p>Before continuing we need to update the script with your Rackspace Cloud details, I would also suggest testing the script to ensure that it working.</p>
+
+<h4 id="update-config">Update Config</h4>
+
+<pre><code class="language-php">private $accountId = &quot;12345678&quot;;
+
+// Your Rackspace username
+private $username = &quot;exampleuser&quot;;
+
+// Your Rackspace API key
+private $apiKey = &quot;kh45kh345k34k345h3k45h&quot;;
+
+// Your Rackspace load balancer ID
+private $loadBalancer = &quot;123456&quot;;
+
+// Your Racspace region (ord, dfw, iad, lon, syd, hkg)
+private $region = &quot;lon&quot;;
+</code></pre>
+
+<h4 id="test-script">Test script</h4>
+
+<pre><code class="language-bash">php -f $HOME/rackban.php ban 10.0.0.1
+</code></pre>
+
+<pre><code class="language-bash">php -f $HOME/rackban.php unban 10.0.0.1
+</code></pre>
+
+<h2 id="configure-fail2ban">Configure Fail2Ban</h2>
+
+<p>After you have tested that the script is working you can proceed to create the custom action for Fail2Ban, the configuration file <code>/etc/fail2ban/action.d/rackban.conf</code></p>
+
+<p><em>Replace {PATH_TO_PHP} with the full path to PHP e.g. /usr/bin/php</em></p>
+
+<p><em>Replace {PATH} with the path to rackban.php e.g. /home/trozz</em></p>
+
+<pre><code>[Definition]
+actionstart =
+actionstop =
+actioncheck =
+actionban = {PATH_TO_PHP} -f {PATH}/rackban.php ban &lt;ip&gt;
+actionunban = {PATH_TO_PHP} -f {PATH}/rackban.php unban &lt;ip&gt;
+</code></pre>
+
+<p>Finally you would need to update the action that is performed for your Fail2Ban jail.</p>
+
+<pre><code>[apache-auth]
+enabled = true
+port     = http,https
+logpath  = %(apache_error_log)s
+action = rackban
+</code></pre>
+
+<p>And there you have it with this setup you will now automatically ban people that connect through your Cloud Load Balancer</p>
+
+
+  
+<div class="prev-next-post pure-g">
+  <div class="pure-u-1-24" style="text-align: left;">
+    
+    <a href="https://www.trozzy.net/post/1467641615-resetting-rax_service_level_automation-metadata/"><i class="fa fa-chevron-left"></i></a>
+    
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="prev">
+      <a href="https://www.trozzy.net/post/1467641615-resetting-rax_service_level_automation-metadata/">Resetting rax_service_level_automation metadata</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-2-24">
+    &nbsp;
+  </div>
+  <div class="pure-u-10-24">
+    
+    <nav class="next">
+      <a href="https://www.trozzy.net/post/1467669072-automating-hugo-deployment/">Automating Hugo Deployments</a>
+    </nav>
+    
+  </div>
+  <div class="pure-u-1-24" style="text-align: right;">
+    
+    <a href="https://www.trozzy.net/post/1467669072-automating-hugo-deployment/"><i class="fa fa-chevron-right"></i></a>
+    
+  </div>
+</div>
+
+
+
+  
+
+</div>
+
+</div>
+</div>
+<script src="https://www.trozzy.net/js/ui.js"></script>
+
+
+<script>
+  
+  if (window.location.hostname != "localhost") {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-39926379-1', 'auto');
+    ga('send', 'pageview');
+  }
+</script>
+
+
+
+
+
+</body>
+</html>
+

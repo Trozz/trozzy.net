@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codeship on Just another blog</title>
+    <link>https://www.trozzy.net/tags/codeship/</link>
+    <description>Recent content in Codeship on Just another blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2018. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 04 Jul 2016 22:51:30 +0100</lastBuildDate>
+    
+	<atom:link href="https://www.trozzy.net/tags/codeship/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Automating Hugo Deployments</title>
+      <link>https://www.trozzy.net/post/1467669072-automating-hugo-deployment/</link>
+      <pubDate>Mon, 04 Jul 2016 22:51:30 +0100</pubDate>
+      
+      <guid>https://www.trozzy.net/post/1467669072-automating-hugo-deployment/</guid>
+      <description>As you may notice I have done a few updates today, I have always had the strong believe that if a task is repeated more than once that it should be automated, now deploying something like Hugo can be very easy as if you simply commit the public folder then this folder can be deployed, personally I do not commit this folder and infact exclude it via my .gitignore, this is a habit due to the fact that I believe in reproducible builds, yes even for something as simple as Hugo.</description>
+    </item>
+    
+  </channel>
+</rss>
