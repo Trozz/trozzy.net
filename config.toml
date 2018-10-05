@@ -51,7 +51,7 @@ theme = "blackburn"
   [[menu.main]]
     name = "Resume"
     pre = "<i class='fa fa-address-card fa-fw'></i>"
-    weight = 3
+    weight = 4
     url = "https://cv.trozzy.net/"
 
 
