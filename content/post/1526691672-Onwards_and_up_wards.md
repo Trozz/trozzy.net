@@ -1,6 +1,6 @@
 +++
 date = "2018-05-19T02:02:47+01:00"
-draft =
+draft = true
 title = "Onwards and up wards"
 tags = [ "personal", "ocado", "crownpeak" ]
 categories = [
