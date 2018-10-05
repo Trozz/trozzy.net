@@ -2,7 +2,7 @@ baseurl = "https://www.trozzy.net/"
 title = "Just another blog"
 author = "Trozz"
 # Shown in the side menu
-copyright = "&copy; 2016. All rights reserved."
+copyright = "&copy; 2018. All rights reserved."
 canonifyurls = true
 paginate = 10
 cf_full_purge = false
@@ -20,6 +20,7 @@ theme = "blackburn"
   # disqus = "trozz"
   # CSS name for highlight.js
   highlightjs = "agate"
+  highlightjs_extra_languages = ["yaml"]
   dateFormat = "02 Jan 2006, 15:04"
 
 [menu]
@@ -47,6 +48,12 @@ theme = "blackburn"
     pre = "<i class='fa fa-phone fa-fw'></i>"
     weight = 3
     url = "/contact/"
+  [[menu.main]]
+    name = "Resume"
+    pre = "<i class='fa fa-address-card fa-fw'></i>"
+    weight = 3
+    url = "https://cv.trozzy.net/"
+
 
 [social]
   # Link your social networking accouns to the side menu
@@ -68,9 +75,13 @@ theme = "blackburn"
 
   # Techie
   github = "Trozz"
+  gitlab = "Trozz"
   bitbucket = "Trozz"
   stackoverflow = "989652/trozz"
   serverfault = "55793/trozz"
+
+  # Gaming
+  steam = "trozz"
 
 
   # Other
