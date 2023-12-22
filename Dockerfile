@@ -1,4 +1,4 @@
-FROM nginx:mainline-alpine
+FROM nginx:1.25.3-alpine3.18
 RUN mkdir -p /opt/nginx/trozzy.net/public && \
     rm /etc/nginx/conf.d/default.conf
 ADD public/ /opt/nginx/trozzy.net/public
